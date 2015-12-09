@@ -1,6 +1,6 @@
 Package.describe({
   name:    "clinical:env",
-  version: "3.1.7",
+  version: "3.1.9",
   summary: "Set environment variables defined in a .env file",
   git:     "https://github.com/clinical-meteor/clinical-env",
   contributors: [
@@ -31,9 +31,7 @@ Package.onUse(function (api) {
   api.addFiles('lib/clinical-env-client.js', ['client']);
   api.addFiles('lib/clinical-env-server.js', ['server']);
 
-  //api.export('allowEnv', ['server']);
   api.export('process', ['client']);
-
   api.export('Env');
 });
 
