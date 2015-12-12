@@ -1,14 +1,19 @@
-describe('Env', function () {
+describe('clinical:env', function () {
   var server = meteor();
   var client = browser(server);
 
+  it('should exist on the client', function () {
+    // return a promise
+    return client.execute(function () {
+      expect(Env).not.to.be.empty;
+    });
+  });
   it('should exist on the server', function () {
     // return a promise
     return server.execute(function () {
       expect(Env).not.to.be.empty;
     });
   });
-
   it('Env.allow() enables values in Env.variable()', function () {
     return server.execute(function () {
       // some code to execute

@@ -1,6 +1,6 @@
 Package.describe({
   name:    "clinical:env",
-  version: "3.1.11",
+  version: "3.1.12",
   summary: "Set environment variables defined in a .env file",
   git:     "https://github.com/clinical-meteor/clinical-env",
   contributors: [
@@ -23,7 +23,7 @@ Npm.depends({dotenv: "0.4.0"});
 Package.onUse(function (api) {
   api.versionsFrom('1.1.0.2');
 
-  api.use('meteor-platform@1.2.2');
+  api.use('meteor-platform@1.1.3');
   api.use('meteorhacks:inject-initial@1.0.2');
   api.use('underscore@1.0.3', ['server']);
 
@@ -40,7 +40,7 @@ Package.onUse(function (api) {
 
 
 Package.on_test(function (api) {
-  api.use('meteor-platform@1.2.2');
+  api.use('meteor-platform@1.1.3');
   api.use('clinical:env');
   api.use('clinical:verification');
   api.addFiles('tests/tinytests/clinical-env.js');
