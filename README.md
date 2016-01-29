@@ -203,4 +203,4 @@ METEOR_ENV=development meteor test-packages clinical:env
 ========================================
 ### Licensing  
 
-MIT.  Use as you will.
+![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
