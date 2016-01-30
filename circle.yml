@@ -39,6 +39,7 @@ dependencies:
     - cd helloworld && git clone http://github.com/clinical-meteor/env packages/env
     - cd helloworld && meteor add clinical:env
     - cd helloworld && starrynight autoconfig
+    - more helloworld/packages/env/tests/gagarin/EnvTests.js
 
 ## Customize test commands
 test:
