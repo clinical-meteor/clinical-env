@@ -4,13 +4,13 @@ describe('clinical:env', function () {
 
   it('Should exist on the client', function () {
     return client.execute(function () {
-      expect(Env).not.to.be.empty;
+      expect(Env).to.exist;
     });
   });
 
   it('Should exist on the server', function () {
     return server.execute(function () {
-      expect(Env).not.to.be.empty;
+      expect(Env).to.exist;
     });
   });
 
