@@ -3,7 +3,7 @@
 
 An environemnt variable based replacement of ``Meteor.settings`` which exposes ``process.env`` on both server and client.  Supports .env files and a [twelve-factor app](http://www.12factor.net/) application architecture.
 
-![build status](https://travis-ci.org/clinical-meteor/env.svg?branch=master)
+[![Circle CI](https://circleci.com/gh/clinical-meteor/env/tree/master.svg?style=svg)](https://circleci.com/gh/clinical-meteor/env/tree/master)
 
 ========================================
 ### Installation
