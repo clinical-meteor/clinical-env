@@ -14,13 +14,14 @@ describe('clinical:env', function () {
     });
   });
 
-  it('Env.allow() enables values in Env.variable()', function () {
+  it('process.env.NODE_ENV sets Env.isTesting() on client', function () {
+    return client.execute(function () {
+        expect(Env.isTesting()).to.equal(true);
+    });
+  });
+  it('process.env.NODE_ENV sets Env.isTesting() on server', function () {
     return server.execute(function () {
         expect(Env.isTesting()).to.equal(true);
-    }).then(function (value) {
-      client.wait(500, 'until env variables are available on server', function (){
-        expect(Env.isTesting()).to.equal(true);
-      });
     });
   });
 });
