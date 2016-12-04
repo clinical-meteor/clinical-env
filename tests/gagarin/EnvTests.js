@@ -28,24 +28,24 @@ describe('clinical:env', function () {
 
   it('process.env.NODE_ENV should exist on the client', function () {
     return client.execute(function () {
-      expect(process.env.NODE_ENV).to.equal('testing');
+      expect(process.env.NODE_ENV).to.equal('development');
     });
   });
 
   it('process.env.NODE_ENV should exist on the server', function () {
     return server.execute(function () {
-      expect(process.env.NODE_ENV).to.equal('testing');
+      expect(process.env.NODE_ENV).to.equal('development');
     });
   });
 
   it('process.env.NODE_ENV sets Env.isTesting() on client', function () {
     return client.promise(function () {
-      expect(Env.isTesting()).to.equal(true);
+      expect(Env.isDevelopment()).to.equal(true);
     });
   });
   it('process.env.NODE_ENV sets Env.isTesting() on server', function () {
     return server.promise(function () {
-      expect(Env.isTesting()).to.equal(true);
+      expect(Env.isDevelopment()).to.equal(true);
     });
   });
 });
