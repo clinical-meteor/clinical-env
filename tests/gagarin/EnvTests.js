@@ -26,13 +26,13 @@ describe('clinical:env', function () {
     });
   });
 
-  it('process.env.NODE_ENV should exist on the client', function () {
+  it('process.env.NODE_ENV should be "development" on client', function () {
     return client.execute(function () {
       expect(process.env.NODE_ENV).to.equal('development');
     });
   });
 
-  it('process.env.NODE_ENV should exist on the server', function () {
+  it('process.env.NODE_ENV should be "development" on server', function () {
     return server.execute(function () {
       expect(process.env.NODE_ENV).to.equal('development');
     });
