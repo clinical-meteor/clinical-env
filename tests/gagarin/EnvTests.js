@@ -16,12 +16,12 @@ describe('clinical:env', function () {
 
   it('process.env.NODE_ENV sets Env.isTesting() on client', function () {
     return client.execute(function () {
-        expect(Env.isTesting()).to.equal(true);
+      expect(Env.isTesting()).to.equal(true);
     });
   });
   it('process.env.NODE_ENV sets Env.isTesting() on server', function () {
     return server.execute(function () {
-        expect(Env.isTesting()).to.equal(true);
+      expect(Env.isTesting()).to.equal(true);
     });
   });
 });
