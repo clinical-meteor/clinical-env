@@ -16,11 +16,10 @@ describe('clinical:env', function () {
 
   it('Env.allow() enables values in Env.variable()', function () {
     return server.execute(function () {
-      Env.allow({DEBUG: true});
+        expect(Env.isTesting()).to.equal(true);
     }).then(function (value) {
       client.wait(500, 'until env variables are available on server', function (){
-        expect(Env.variable('DEBUG')).to.be.ok;
-        expect(Env.variable('DEBUG')).to.equal(true);
+        expect(Env.isTesting()).to.equal(true);
       });
     });
   });
