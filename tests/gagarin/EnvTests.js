@@ -38,14 +38,14 @@ describe('clinical:env', function () {
     });
   });
 
-  it('process.env.NODE_ENV sets Env.isTesting() on client', function () {
+  it('process.env.NODE_ENV sets Env.isDevelopment() on client', function () {
     return client.promise(function () {
-      expect(Env.isDevelopment()).to.equal(true);
+      expect(Env.isDevelopment()).to.be.ok;
     });
   });
-  it('process.env.NODE_ENV sets Env.isTesting() on server', function () {
+  it('process.env.NODE_ENV sets Env.isDevelopment() on server', function () {
     return server.promise(function () {
-      expect(Env.isDevelopment()).to.equal(true);
+      expect(Env.isDevelopment()).to.be.ok;
     });
   });
 });
