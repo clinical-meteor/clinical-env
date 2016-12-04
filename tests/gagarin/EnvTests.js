@@ -39,12 +39,12 @@ describe('clinical:env', function () {
   });
 
   it('process.env.NODE_ENV sets Env.isDevelopment() on client', function () {
-    return client.promise(function () {
+    return client.execute(function () {
       expect(Env.isDevelopment()).to.be.ok;
     });
   });
   it('process.env.NODE_ENV sets Env.isDevelopment() on server', function () {
-    return server.promise(function () {
+    return server.execute(function () {
       expect(Env.isDevelopment()).to.be.ok;
     });
   });
