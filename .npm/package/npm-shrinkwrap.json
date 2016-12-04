@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "dotenv": {
-      "version": "0.4.0"
+      "version": "0.4.0",
+      "resolved": "https://registry.npmjs.org/dotenv/-/dotenv-0.4.0.tgz",
+      "from": "dotenv@0.4.0"
     }
   }
 }
